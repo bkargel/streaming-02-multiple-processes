@@ -5,3 +5,31 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+
+PS C:\Users\bakar\44-671\.venv\streaming-02-multiple-processes>  c:; cd 'c:\Users\bakar\44-671\.venv\streaming-02-multiple-processes'; & 'C:\Users\bakar\AppData\Local\Microsoft\WindowsApps\python3.11.exe' 'c:\Users\bakar\.vscode\extensions\ms-python.python-2023.14.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '53150' '--' 'c:\Users\bakar\44-671\.venv\streaming-02-multiple-processes\multiple_processes.py' 
+2023-09-02 15:46:43,749 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-09-02 at 03:46 PM
+  Operating System: nt Windows 10
+  Python Version:   3.11.5
+  Path to Interpreter:  C:\Users\bakar\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+======================================================================
+
+2023-09-02 15:46:43,750 - INFO - Called recreate_database().
+2023-09-02 15:46:43,750 - INFO - Called drop_table().
+2023-09-02 15:46:43,763 - INFO - Table 'pets' dropped successfully.
+2023-09-02 15:46:43,765 - INFO - Called create_table().
+2023-09-02 15:46:43,781 - INFO - Table 'pets' created successfully.
+2023-09-02 15:46:44,074 - INFO - Called process_one().
+2023-09-02 15:46:44,074 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-09-02 15:46:44,089 - INFO - Called process_two().
+2023-09-02 15:46:44,089 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-09-02 15:46:44,139 - INFO - Called process_three().
+2023-09-02 15:46:44,139 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-09-02 15:46:47,109 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-09-02 15:46:49,796 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2023-09-02 15:46:49,796 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2023-09-02 15:46:50,141 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2023-09-02 15:46:52,720 - ERROR - ERROR while P1 inserting pet Buddy: database is locked
+PS C:\Users\bakar\44-671\.venv\streaming-02-multiple-processes> 

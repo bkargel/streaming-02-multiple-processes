@@ -9,25 +9,9 @@ This example starts a shared database and multiple processes.
 The processes represent multiple users, or locations, or programs 
 hitting a shared database at the same time. 
 
-## Prerequisites
-
-1. Git
-1. Python 3.7+ (3.11+ preferred)
-1. VS Code Editor
-1. VS Code Extension: Python (by Microsoft)
-
 ## Task 1. Fork 
-
-Fork this repository ("repo") into **your** GitHub account. 
-
 ## Task 2. Clone
-
-Clone **your** new GitHub repo down to the Documents folder on your local machine. 
-
-## Task 3. Explore
-
-Explore your new project repo in VS Code on your local machine.
-
+## Task 3. Explore in VS Code
 ## Task 4. Execute Check Script
 
 Execute 00_check_core.py to generate useful information.
@@ -39,14 +23,14 @@ Execute multiple_processes.py.
 Read the output. Read the code. 
 Try to figure out what's going on. 
 
-1. What libraries did we import?
-1. Where do we set the TASK_DURATION_SECONDS?
-1. How many functions are defined? 
-1. What are the function names? 
-1. In general, what does each function do? 
+1. What libraries did we import? datetime, logging, multiprocessing, os, platform, sqlite3, sys, and time
+1. Where do we set the TASK_DURATION_SECONDS? The TASK_DURATION_SECONDS is set on line 40
+1. How many functions are defined? There are a total of 7 functions defined in the script.
+1. What are the function names? recreate_database, create_table, drop_table, insert_pet, process_one, process_two, process_three
+1. In general, what does each function do? recreate_database: drops the shared.db and recreates it to start from scratch, create_table: creates a new 'pets' table, drop_table: drops the 'pets' table if it exists, insert_pet: inserts the pets names into the table, process_one: works with insert_pets to insert P1 pets, process_two: works with insert_pets to insert P2 pets, process_three: works with insert_pets to insert P3 pets
 1. Where does the execution begin? Hint: generally at the end of the file.
-1. How many processes do we start?
-1. How many records does each process insert?
+1. How many processes do we start? We start 3 processes.
+1. How many records does each process insert? Each process inserts 2 records.
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
